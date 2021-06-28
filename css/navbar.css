@@ -1,0 +1,60 @@
+@import "shared.css";
+
+.masthead-navbar {
+  display: none;
+}
+
+.masthead-navbar__link {
+  color: rgb(var(--sand));
+  margin-left: 40px;
+  font-weight: 900;
+  font-style: normal;
+  font-size: .8rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(var(--yellow), 0);
+  transition: transform .1s ease, border-bottom .05s ease;
+}
+
+.masthead-navbar__link:hover,
+.masthead-navbar__link:active {
+  color: rgb(var(--yellow));
+  border-bottom: 2px solid rgb(var(--yellow));
+  transition: border-bottom .05s ease;
+}
+
+.masthead-navbar__link:hover {
+  /* transform: scale(1.002); */
+}
+
+.masthead-navbar__link:active {
+  transform: translateY(1px);
+  transition: transform .1s ease;
+}
+
+.masthead-navbar__menu-icon {
+  display: block;
+  height: 26px;
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+/* Medium Screens */
+@media (min-width: 768px) {
+  .masthead-navbar {
+    display: block;
+  }
+
+  .masthead-navbar__menu-icon {
+    display: none;
+  }
+
+}
+
+/* Large Screens */
+@media (min-width:1024px) {
+
+}

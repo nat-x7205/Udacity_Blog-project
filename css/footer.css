@@ -1,0 +1,26 @@
+@import "shared.css";
+
+footer {
+  font-size: .7rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(var(--brown), .95);
+  color: rgb(var(--sand));
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+/* Medium Screens */
+@media (min-width: 768px) {
+  
+}
+
+/* Large Screens */
+@media (min-width:1024px) {
+  
+}

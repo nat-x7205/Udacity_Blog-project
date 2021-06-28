@@ -1,0 +1,400 @@
+/*  ASSETS
+--- Colours ---
+Sand: #F1D9C2; rgb(241, 217, 194)
+Sand 20%: #FCF7F3; rgb(252, 247, 243);
+Sand 12%: #FDFAF8; rgb(253, 250, 248);
+Dark-sand: #DAC3B2; rgb(218, 195, 178);
+Yellow: #F28C23; rgb(242, 140, 35);
+Brown: #3E2926; rgb(62, 41, 38);
+
+How to set opasity with variables: 
+ background-color: rgba(var(--color), 0.2);
+
+*/
+
+@import "shared.css";
+@import "navbar.css";
+@import "footer.css";
+
+/* --- MASTHEAD --- */
+.masthead {
+  background-image:  url("../images/Dotted-pattern.png");
+  background-color:  rgba(var(--brown), .75);
+  background-blend-mode: multiply;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+/* ------------ */
+
+.masthead .logo-place {
+  width: 100%;
+  background-image: linear-gradient(180deg, rgba(var(--brown), 0) 10%, rgba(var(--brown), .5));
+  text-align: center;
+}
+
+.masthead .logo-place img {
+  width: 156px;
+  margin: 40px auto 32px auto;
+}
+
+/* ------------ */
+.masthead nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(var(--brown), .9);
+  height: 60px;
+  padding-right: 20px;
+}
+
+.masthead nav img {
+  width: 26px;
+  /* height: auto; */
+}
+
+/* --- CARDS --- */
+.main-card,
+.main-card:visited {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid rgb(var(--sand));
+  border-radius: 2px;
+  margin-top: 1.5rem;
+  /* transition: transform 0.2s ease; */
+}
+
+.main-card:hover {
+  background-color: white;
+  box-shadow: 0 3px 15px rgba(var(--brown), .2);
+  transform: scale(1.007);
+  transition: transform 0.2s ease;
+}
+
+.main-card:active {
+  background-color: white;
+  box-shadow: 0 2px 12px rgba(var(--brown), .3);
+  transform: scale(1.002) translateY(1px);
+  transition: transform 0.1s ease;
+}
+
+.main-card__image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 120px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+#main-card__frazer-island {
+  background-image: url("../images/fraser-island.jpeg");
+  background-position: center;
+}
+
+#main-card__thredbo {
+  background-image: url("../images/Thredbo.jpeg");
+  background-position: 0 10%;
+}
+
+#main-card__sovereign-hill {
+  background-image: url("../images/Sovereign-Hill-Gold-museum.jpeg");
+  background-position: 0 47%;
+}
+
+#main-card__stargazing {
+  background-image: url("../images/Stargazing_Coonabarabran.jpg");
+  background-position: 0 70%;
+}
+
+.main-card h3 {
+  padding: 0 20px .5rem 20px;
+}
+
+.main-card__text {
+  position: relative;
+  padding: 0 20px 0 20px;
+  height:  8rem;
+  overflow: hidden;
+}
+
+.main-card__text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient( rgba(255,255,255, 0) 20%, white 98% );
+}
+
+.main-card a {
+  padding: .5rem 20px 20px 20px;
+}
+
+
+/* ---ASIDE --- */
+
+#aside__subscribe-block {
+  background-image: url("../images/Dotted-pattern_2.jpg");
+  background-color: rgba(var(--brown), .9);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(var(--sand));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem
+}
+
+#aside__subscribe-block h2 {
+  align-self: center;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  margin-top: 2.2rem;
+  margin-bottom: .7rem;
+}
+
+#aside__subscribe-block p {
+  text-align: center;
+  align-self: center;
+  color: rgb(var(--sand));
+  font-size: 1.1rem;
+}
+
+#aside__subscribe-block input,
+#aside__subscribe-block button {
+  align-self: center;
+  text-align: center;
+  border: 3px solid;
+  margin-top: 1.2rem;
+}
+
+#aside__subscribe-block input {
+  color: rgb(var(--brown));
+  font-size: .9rem;
+  width: 100%;
+  height: 44px;
+  background-color: rgb(var(--sand-20));
+  border-color: rgb(var(--sand-20));
+  border-radius: 1px;
+}
+
+#aside__subscribe-block input::placeholder {
+  font-size: .8rem;
+  color:rgba(var(--brown), .5);
+}
+
+#aside__subscribe-block button {
+  height: 38px;
+  background-color: rgb(var(--yellow));
+  border-color: rgb(var(--yellow));
+  border-radius: 20px;
+  color: rgb(var(--sand-20));
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: .85rem;
+  letter-spacing: .15rem;
+  padding: 2px 18px 0 18px;
+  margin-bottom: 2.2rem;
+  transition: transform .2s ease, box-shadow .2s ease;
+
+}
+
+#aside__subscribe-block button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(var(--brown), .7);
+  transition: transform .2s ease-in-out;
+}
+
+#aside__subscribe-block button:active {
+  transform: scale(1) translateY(2px);
+  box-shadow: 0 3px 8px rgba(var(--brown), .9);
+  transition: transform .1s ease-in-out;
+}
+
+/* ----------- */
+
+.aside__blockquote {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  background-color: white;
+}
+
+.quotation-mark-left {
+  height: 50px;
+  align-self: flex-start;
+}
+
+.quotation-mark-right {
+  height: 50px;
+  transform: rotate(180deg);
+  align-self: flex-end;
+}
+
+.aside__blockquote-text {
+  align-self: center;
+  width: 70%;
+}
+
+blockquote {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-top: 5px;
+}
+
+.aside__blockquote-text-cite {
+  font-size: 0.9rem;
+  padding-top: 5px;
+}
+
+.aside__blockquote-quatation {
+  font-size: 72px;
+  font-weight: 900;
+  color: rgba(var(--yellow), .5)
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+/* Medium Screens */
+@media (min-width: 768px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    line-height: 1.7rem
+  }
+
+  .body-layout {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+      "intro aside" 
+      "main aside";
+  }
+
+  #cards-intro {
+    grid-area: intro;
+    margin-top: 1rem;   
+  }
+
+  main {
+    grid-area: main;
+    padding-left: 20px;
+    margin-bottom: 2rem;
+  }
+
+  .main-card,
+  .main-card:visited {
+    margin-top: 20px;
+  }
+
+  .main-card__image {
+    height: 150px;
+  }
+
+  #main-card__thredbo {
+    background-position: 0 20%;
+  }
+  
+  #main-card__sovereign-hill {
+    background-position: 0 42%;
+  }
+
+  aside {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-left: 1px solid rgb(var(--sand));
+  }
+
+  .aside__blockquote {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .quotation-mark-left,
+  .quotation-mark-right {
+    height: 40px;
+  }
+  
+   
+}
+
+/* Large Screens */
+@media (min-width:1024px) {
+  .masthead {
+    background-image:  url("../images/DT-masthead-banner-BG.jpg");
+  }
+
+  .body-layout {
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 25%;
+    grid-template-areas:
+      "intro intro aside"
+      "main main aside"
+      "main main aside";
+  }
+
+  #cards-intro {
+    grid-area: intro;
+    margin-right: 30px;
+  }
+
+  main {
+    margin-right: 32px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    column-gap: 24px;
+    /* row-gap: 1rem; */
+    grid-template-areas: 
+      "tl tr"
+      "bl br";
+  }
+
+  #main-card__frazer-island {
+    grid-area: tl;
+  }
+
+  #main-card__main-card__thredbo {
+    grid-area: tr;
+  }
+
+  #main-card__sovereign-hill {
+    grid-area: bl;
+  }
+
+  #main-card__main-card__stargazing {
+    grid-area: br;
+  }
+
+  aside {
+    padding-left: 30px;
+  }
+
+  #aside__subscribe-block h2 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
