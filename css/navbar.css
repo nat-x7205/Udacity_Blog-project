@@ -56,5 +56,9 @@
 
 /* Large Screens */
 @media (min-width:1024px) {
-
+  .masthead-layout {
+    max-width: 1280px;
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
 }

@@ -43,14 +43,27 @@ How to set opasity with variables:
 }
 
 /* ------------ */
-.masthead nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+.masthead-navbar-background {
   background-color: rgba(var(--brown), .9);
   height: 60px;
-  padding-right: 20px;
+}
+
+.masthead-layout {
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#masthead-logo__coin {
+  display: none;
+  height: 28px;
+  align-self: center;
+  position: relative;
+  top: 4px;
 }
 
 .masthead nav img {
@@ -336,8 +349,6 @@ blockquote {
   .quotation-mark-right {
     height: 40px;
   }
-  
-   
 }
 
 /* Large Screens */
